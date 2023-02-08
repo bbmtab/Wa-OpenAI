@@ -35,6 +35,13 @@ Sesudah menginstall file node_modules, silahkan extract file ```node_modules.zip
 ```bash
 $ node index.js
 ```
+docker:
+$ git clone https://github.com/bbmtab/Wa-OpenAI && cd Wa-OPenAI
+copy folder node_modulus 
+ubah key.json value
+$ docker build . -t wa-openai
+$ docker run wa-openai
+
 
 ## Donate
 <a href="https://saweria.co/Sansekai" target="_blank"><img src="https://user-images.githubusercontent.com/26188697/180601310-e82c63e4-412b-4c36-b7b5-7ba713c80380.png" alt="Donate For Yusril" height="41" width="174"></a>
