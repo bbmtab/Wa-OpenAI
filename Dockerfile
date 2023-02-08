@@ -1,23 +1,18 @@
-# Use an official Node.js runtime as the base image
-FROM node:14-alpine
+FROM node:alpine
 
-# Set the working directory in the container
+RUN \
+apk update \
+apk add --no-cache git \
+apk add --no-cache nodejs
+
 WORKDIR /app
-
-# Copy the package.json file to the container
-COPY package.json .
-
-# Install the dependencies
-RUN npm install
-
-# Copy the application code to the container
 COPY . .
 
-# Install
-RUN npm install baileys
+RUN apk add git nodejs
 
-# Load the environment variables from config.env
-ENV $(cat config.env | xargs)
+RUN npm install
 
-# Specify the command to run when the container starts
+# Read environment variables from key.json file
+#ENV keyopenai=$(cat /key.json | jq -r .keyopenai)
+
 CMD ["node", "index.js"]
