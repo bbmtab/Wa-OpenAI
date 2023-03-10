@@ -1,7 +1,7 @@
 FROM node:alpine
 
 WORKDIR /app
-COPY . .
+COPY . /app
 
 RUN apk update \
     && apk add --no-cache git \
