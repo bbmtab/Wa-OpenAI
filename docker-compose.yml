@@ -7,5 +7,5 @@ services:
     environment:
       - NO= no hp
       - KEY=ISI_APIKEY_OPENAI_DISINI
-      - SESSION=
+      - SESSION=isi nama folder sesi
     restart: always
