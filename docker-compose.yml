@@ -1,0 +1,11 @@
+version: '3'
+services:
+  wa-openai:
+    image: harmoniajaya/waopenai:latest
+    env_file: 
+      - .env
+    environment:
+      - NO= no hp
+      - KEY=ISI_APIKEY_OPENAI_DISINI
+      - SESSION=
+    restart: always
