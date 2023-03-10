@@ -13,4 +13,6 @@ RUN apk update \
 # Read environment variables from key.json file
 #ENV keyopenai=$(cat /key.json | jq -r .keyopenai)
 
-CMD ["node", "index.js"]
+#CMD ["node", "index.js"]
+RUN chmod +x app/entrypoint.sh
+CMD app/entrypoint.sh
