@@ -1,4 +1,4 @@
 {
-  "keyopenai": "${KEY || 'ISI_APIKEY_OPENAI_DISINI'}",
+  "keyopenai": "key",
   "donasi": "jangan lupa support ya bang :) https://saweria.co/sansekai"
 }
