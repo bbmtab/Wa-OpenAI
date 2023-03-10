@@ -3,6 +3,8 @@ FROM node:alpine
 WORKDIR /app
 COPY . /app
 
+ENV KEY=${KEY}
+
 RUN apk update \
     && apk add --no-cache git \
     && apk add --no-cache nodejs \
@@ -14,5 +16,5 @@ RUN apk update \
 #ENV keyopenai=$(cat /key.json | jq -r .keyopenai)
 
 #CMD ["node", "index.js"]
-RUN chmod +x app/entrypoint.sh
-CMD app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+ENTRYPOINT ["/app/entrypoint.sh"]
