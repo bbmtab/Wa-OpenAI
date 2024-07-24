@@ -9,6 +9,7 @@ RUN apk update \
     && apk add --no-cache git \
     && apk add --no-cache nodejs \
     && npm install mime-types \
+    && npm install pm2 -g \
     && npm install
     
 
