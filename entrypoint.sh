@@ -3,4 +3,5 @@
 sed -i "s/\"keyopenai\": \"key\"/\"keyopenai\": \"${KEY}\"/" /app/key.json
 
 # Start the Node.js application
-node index.js
+# node index.js (old cmd)
+pm2 start /app/index.js --name "wa-openai" --no-daemon
