@@ -1,6 +1,5 @@
-const sessionName = process.env.SESSION || "yusril";
+const sessionName = "yusril";
 const donet = "https://saweria.co/sansekai";
-const owner = [process.env.NO || "6287878817169"]; // Put your number here ex: ["62xxxxxxxxx"]
 const {
   default: sansekaiConnect,
   useMultiFileAuthState,
