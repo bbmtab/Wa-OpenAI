@@ -1,4 +1,4 @@
-const sessionName = "yusril";
+//const sessionName = "yusril";
 const donet = "https://saweria.co/sansekai";
 const {
   default: sansekaiConnect,
@@ -20,6 +20,11 @@ const chalk = require("chalk");
 const figlet = require("figlet");
 const _ = require("lodash");
 const PhoneNumber = require("awesome-phonenumber");
+require('dotenv').config();
+
+// Load env variables
+const sessionName = process.env.SESSION || 'harmo';
+const phoneNumber = process.env.NO || '087818000129';
 
 const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) });
 
